@@ -34,7 +34,7 @@ export async function POST(req: Request) {
       recordingStatusCallback: `${
         process.env.NEXT_PUBLIC_BASE_URL || ""
       }/api/voice/recording`,
-      recordingStatusCallbackEvent: "completed", // only when the file is finalized
+      recordingStatusCallbackEvent: ["completed"], // only when the file is finalized
     });
 
     dial.number(forwardTo!);
